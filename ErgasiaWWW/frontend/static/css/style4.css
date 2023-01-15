@@ -1,0 +1,470 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    background-color: rgb(32, 8, 11);
+    background-image: url(" https://www.hdwallpapers.in/thumbs/2021/red_roses_flowers_petals_dark_background_4k_hd_dark_background-t2.jpg");
+    background-size: cover;
+    overflow: hidden;
+    font-style: Serif;
+  }
+  .menu {
+    font-style: italic;
+  }
+  
+  .layout {
+    display: grid;
+    width:100vw;
+    height:100vh;
+    grid-template-columns: 1fr 8fr;
+    grid-template-rows: min-content min-content auto min-content;
+    grid-template-areas:
+      "header header"
+      "side nav"
+      "side main"
+      "side footer";
+  }
+  
+  
+  /* Style the header */
+  .header {
+    background-color: #111;
+    text-align: center;
+    font-size: 17px;
+    grid-area: header;
+    height: 50px;
+    padding-bottom: 30px;
+  }
+  
+  /* Style the top navigation bar */
+  .topnav {
+    background-color: #333;
+    grid-area: nav;
+    position: static;
+    align-self: start;
+  }
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 18px 20px;
+    text-decoration: none;
+    background-color: #333;
+    border: 0;
+  }
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  .topnav a.split {
+    float: right;
+    background-color:  rgb(112, 23, 23);
+    color: white;
+  }
+  
+  
+  .sidenav {
+    height: 100%;
+    width: 152px;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    grid-area: side;
+    position: sticky;
+    text-align: center;
+    padding-top: 80px;
+  }
+  
+  .bioContent {
+    display: none;
+  }
+  .bookContent {
+    display: none;
+  }
+  .photoContent {
+    display: none;
+  }
+  .userContent {
+    display: none;
+  }
+  .linksContent {
+    display: none;
+  } 
+  .show {display:block;}
+  
+  /* Side navigation links */
+  .sidenav a {
+    color: white;
+    padding: 16px;
+    text-decoration: none;
+    display: block;
+    font-size: x-large;
+  }
+  
+  /* Change color on hover */
+  .sidenav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  form {border: 3px solid  #111;}
+
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #111;
+    box-sizing: border-box;
+  }
+
+  button {
+    background-color: #252231;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  button:hover {
+    opacity: 0.8;
+  }
+
+  .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: rgb(112, 23, 23);
+  }
+
+
+  .container {
+    padding: 16px;
+  }
+
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+
+  .stephen-img{
+    float: right;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    border: #111;
+    padding: 2px;
+  }
+
+  .image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #111;
+    border: 3px solid rgb(95, 38, 38);
+    border-radius: 4px;
+    padding-bottom: 20px;
+  }
+  
+  .single-img {
+    padding: 0 20px 20px;
+    padding-top: 20px;
+    
+  }
+
+  .desc{
+    border-radius: 4px;
+    text-align: center;
+    font-size: medium;
+  }
+
+  #table1 {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #252231;
+    
+  }
+
+  #table1 a {
+    color: #ddd;
+  }
+  
+  #table1 td, #table1 th {
+    padding: 8px;
+    border-bottom: 2px solid rgb(112, 23, 23);
+  }
+  
+  #table1 tr:nth-child(even){background-color: #332f42;}
+  
+  #table1 tr:hover {background-color: rgb(54, 54, 62);}
+  
+  #table1 th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #111;
+    color: white;
+  }
+
+  /* Style the content */
+  .main {
+    padding: 10px 20px;
+    grid-area: main;
+    width:100%;
+    height:100%;
+    font-size: x-large;
+    overflow-y: scroll;
+    color: #fff;
+    position: static;
+  }
+  
+  .footer {
+    grid-area: footer;
+    background-color: rgb(77, 77, 77);
+    color: #fff;
+    padding: 15px;
+    align-self: end;
+    font-size: 0.7rem;
+    height: 20px;
+  }
+
+/* media */
+@media screen and (max-height: 900px), screen and (max-width:500px){
+  body {
+    margin: 0;
+    background-color: rgb(32, 8, 11);
+    background-image: url(" https://www.hdwallpapers.in/thumbs/2021/red_roses_flowers_petals_dark_background_4k_hd_dark_background-t2.jpg");
+    background-size: cover;
+    overflow: hidden;
+    font-style: Serif;
+  }
+  .menu {
+    font-style: italic;
+  }
+  
+  .layout {
+    display: grid;
+    width:100vw;
+    height:100vh;
+    grid-template-columns: 1fr 8fr;
+    grid-template-rows: min-content min-content auto min-content;
+    grid-template-areas:
+      "header header"
+      "side nav"
+      "side main"
+      "side footer";
+  }
+  
+  
+  /* Style the header */
+  .header {
+    background-color: #111;
+    text-align: center;
+    font-size: 17px;
+    grid-area: header;
+    height: 50px;
+    padding-bottom: 30px;
+  }
+  
+  /* Style the top navigation bar */
+  .topnav {
+    background-color: #333;
+    grid-area: nav;
+    position: static;
+    align-self: start;
+  }
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 18px 20px;
+    text-decoration: none;
+    background-color: #333;
+    border: 0;
+  }
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  .topnav a.split {
+    float: right;
+    background-color:  rgb(112, 23, 23);
+    color: white;
+  }
+  
+  
+  .sidenav {
+    height: 100%;
+    width: 152px;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    grid-area: side;
+    position: sticky;
+    text-align: center;
+    padding-top: 80px;
+  }
+  
+  .bioContent {
+    display: none;
+  }
+  .bookContent {
+    display: none;
+  }
+  .photoContent {
+    display: none;
+  }
+  .userContent {
+    display: none;
+  }
+  .linksContent {
+    display: none;
+  } 
+  .show {display:block;}
+  
+  /* Side navigation links */
+  .sidenav a {
+    color: white;
+    padding: 16px;
+    text-decoration: none;
+    display: block;
+    font-size: x-large;
+  }
+  
+  /* Change color on hover */
+  .sidenav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  form {border: 3px solid  #111;}
+
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #111;
+    box-sizing: border-box;
+  }
+
+  button {
+    background-color: #252231;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  button:hover {
+    opacity: 0.8;
+  }
+
+  .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: rgb(112, 23, 23);
+  }
+
+
+  .container {
+    padding: 16px;
+  }
+
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+
+  .stephen-img{
+    float: right;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    border: #111;
+    padding: 2px;
+  }
+
+  .image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #111;
+    border: 3px solid rgb(95, 38, 38);
+    border-radius: 4px;
+    padding-bottom: 20px;
+  }
+  
+  .single-img {
+    padding: 0 20px 20px;
+    padding-top: 20px;
+    
+  }
+
+  .desc{
+    border-radius: 4px;
+    text-align: center;
+    font-size: medium;
+  }
+
+  #table1 {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #252231;
+    
+  }
+
+  #table1 a {
+    color: #ddd;
+  }
+  
+  #table1 td, #table1 th {
+    padding: 8px;
+    border-bottom: 2px solid rgb(112, 23, 23);
+  }
+  
+  #table1 tr:nth-child(even){background-color: #332f42;}
+  
+  #table1 tr:hover {background-color: rgb(54, 54, 62);}
+  
+  #table1 th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #111;
+    color: white;
+  }
+
+  /* Style the content */
+  .main {
+    padding: 10px 20px;
+    grid-area: main;
+    width:100%;
+    height:100%;
+    font-size: x-large;
+    overflow-y: scroll;
+    color: #fff;
+    position: static;
+  }
+  
+  .footer {
+    grid-area: footer;
+    background-color: rgb(77, 77, 77);
+    color: #fff;
+    padding: 15px;
+    align-self: end;
+    font-size: 0.7rem;
+    height: 20px;
+  }
+}

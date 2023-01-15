@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="static/css/style4.css">
+        <script type = "text/javascript" src="static/js/JS_functions/sidebar_menu.js"></script>
+        <title> Website</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    <body>
+        <div class="layout">
+            <div class="header">
+                <h2 style="color: beige;">Stephen King</h2>
+            </div>
+            <div class="topnav">
+                <a href="/home" class="split">Home</a>
+                <a href="/bio" onclick="ShowBio()" data-link>Biography</a>
+                <a href="/Photos" onclick="ShowPhotos()" data-link>Photos</a>
+                <a href="/works" onclick="ShowWork()" data-link>Work</a>
+                <a href="/Links" onclick="ShowLinks()" data-link>Links</a>
+                <a href="/User" onclick="ShowUser()" data-link>User</a>
+            </div>
+            <div class="sidenav">
+                <div id="bio-cont" class="bioContent">
+                    <a href="#General">General</a>
+                    <a href="#Career" >Career</a>
+                    <a href="#Writings" >Writings</a>
+                </div>
+                <div id="photo-cont" class="photoContent">
+                    <a href="#Author">Author</a>
+                    <a href="#Films">Films</a>
+                    <a href="#Books">Books</a>
+                </div>
+                <div id="books-cont" class="bookContent">
+                    <a href="/Anthology" onclick="reqData('/static/Anthology.json')" data-link>Anthology</a>
+                    <a href="/Novels" onclick="reqData('/static/Novels.json')" data-link>Novels</a>
+                    <a href="/Screenplays" onclick="reqData('/static/Screenplays.json')" data-link>Screenplays</a>
+                </div>
+                <div id="links-cont" class="linksContent">
+                    <a href="/bibliography" onclick="reqData2('/static/Links.json')" data-link>Bibliography</a>
+                    <a href="/ExternalLinks" onclick="reqData2('/static/ExternalLinks.json')" data-link>External Links</a>
+                </div>
+                <div id="user-cont" class="userContent">
+                    <a href="/logIn" data-link>Log-in</a>
+                    <a href="#">Log-out</a>
+                </div>
+
+            </div>
+            <div id="data-output" class="main"></div>
+            <div class="footer">&copy; 2023</div>
+        </div>
+        
+    <script type="module" src="/static/js/main.js"></script>
+    <script src = "/static/js/JS_functions/FetchFunct.js"></script>
+    <script src = "/static/js/JS_functions/FetchLinks.js"></script>
+    <script src = "/static/js/JS_functions/log-inCheck.js"></script>
+
+    <script>
+        function ShowBio () {
+            EmptyMenu("photoContent");
+            EmptyMenu("bookContent");
+            EmptyMenu("userContent");
+            EmptyMenu("linksContent")
+            var bio = document.getElementById("bio-cont").classList.toggle("show");
+        }
+        </script>
+
+        <script>
+            function ShowPhotos () {
+                EmptyMenu("bioContent");
+                EmptyMenu("bookContent");
+                EmptyMenu("userContent");
+                EmptyMenu("linksContent")
+                var photo = document.getElementById("photo-cont").classList.toggle("show");
+            }
+        </script>
+
+        <script>
+            function ShowWork () {
+                EmptyMenu("bioContent");
+                EmptyMenu("photoContent");
+                EmptyMenu("userContent");
+                EmptyMenu("linksContent")
+                var photo = document.getElementById("books-cont").classList.toggle("show");
+            }
+        </script>
+
+        <script>
+            function ShowLinks () {
+                EmptyMenu("bioContent");
+                EmptyMenu("bookContent");
+                EmptyMenu("userContent");
+                EmptyMenu("photoContent");
+                var photo = document.getElementById("links-cont").classList.toggle("show");
+            }
+        </script>
+
+        <script>
+            function ShowUser () {
+                EmptyMenu("bioContent");
+                EmptyMenu("bookContent");
+                EmptyMenu("photoContent");
+                EmptyMenu("linksContent")
+                var photo = document.getElementById("user-cont").classList.toggle("show");
+            }
+        </script>  
+
+    </body>
+</html>
